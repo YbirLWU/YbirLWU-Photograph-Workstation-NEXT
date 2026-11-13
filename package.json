@@ -1,0 +1,70 @@
+{
+  "name": "ybirlwu-workstation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "YbirLWU Photograph Workstation Next · 影像工作流",
+  "main": "./out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "start": "electron-vite preview",
+    "typecheck": "tsc --noEmit",
+    "dist": "node scripts/dist.mjs"
+  },
+  "dependencies": {
+    "exifr": "^7.1.3",
+    "lucide-react": "^1.70.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "electron": "^45.2.3",
+    "electron-builder": "^26.0.0",
+    "electron-vite": "^6.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^7.1.0"
+  },
+  "build": {
+    "appId": "com.ybirlwu.workstation",
+    "productName": "YbirLWU Photograph Workstation",
+    "directories": {
+      "output": "./release"
+    },
+    "files": [
+      "out/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeader": "build/installerHeader.bmp",
+      "installerSidebar": "build/installerSidebar.bmp",
+      "uninstallerSidebar": "build/uninstallerSidebar.bmp",
+      "language": "2052",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "YbirLWU Photograph Workstation",
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false,
+      "artifactName": "${productName} Setup ${version}-${env.YPW_BUILD_CODE}.${ext}"
+    },
+    "icon": "build/icon.ico",
+    "copyright": "Copyright © 2026 YbirLWU"
+  }
+}
