@@ -8,13 +8,13 @@
 
 **EN** — **YbirLWU Photograph Workstation Next (YPW-N)** is a standalone desktop application built on Electron, developed for professional photographers who need image culling, third-party editing and copyright watermark management. It verifies the integrity of camera originals (RAW) against JPG previews, manages pick import, external/built-in retouching, and batch watermark export. The app never requires any online cloud service — all data is stored and processed on your local computer or server.
 
-- 当前版本：`v1.0.0`（构建后缀 `--261113P1`） **该README文档仅对当前版本生效**
+- 当前版本：`v1.0.0`（构建后缀 `--261116P1`） **该README文档仅对当前版本生效**
 - 运行平台：`win32-x64`（Windows 10/11）
 - 作者 / 版权：YbirLWU © 2026
 
 **EN**
 
-- Current version: `v1.0.0` (build code `NS261113P1`) — **this README applies to the current version only**
+- Current version: `v1.0.0` (build code `NS261116P1`) — **this README applies to the current version only**
 - Platform: `win32-x64` (Windows 10/11)
 - Author / Copyright: YbirLWU © 2026
 
