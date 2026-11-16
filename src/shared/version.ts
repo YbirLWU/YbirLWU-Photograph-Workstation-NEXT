@@ -42,11 +42,11 @@ export const BUILD_DATE: string = typeof __YPW_BUILD_DATE__ === 'undefined' ? lo
 /** 当日构建序号（不含 P 前缀） */
 export const BUILD_SEQ: string = typeof __YPW_BUILD_SEQ__ === 'undefined' ? FALLBACK_SEQ : __YPW_BUILD_SEQ__
 
-/** 完整构建编码，例如 NS261113P1 */
+/** 完整构建编码，例如 NS261116P1 */
 export const BUILD_CODE: string =
   typeof __YPW_BUILD_CODE__ === 'undefined' ? `${BUILD_CHANNEL}${BUILD_DATE}P${BUILD_SEQ}` : __YPW_BUILD_CODE__
 
-/** 对外展示的完整版本标识，例如 v1.0.0 NS261113P1 */
+/** 对外展示的完整版本标识，例如 v1.0.0 NS261116P1 */
 export const APP_VERSION_LABEL = `v${APP_VERSION} ${BUILD_CODE}`
 
 /** 构建通道的中文释义，用于界面说明 */

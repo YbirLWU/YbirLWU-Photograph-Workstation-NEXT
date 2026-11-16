@@ -2077,6 +2077,59 @@ input[type='range']::-webkit-slider-thumb {
   grid-template-columns: minmax(0, 1fr) 296px;
   background: #08090c;
 }
+/*
+ * 大图预览是恒定的深色覆盖层（画布 #08090c / 侧栏 #0e1014），
+ * 所以它的文字色不能直接沿用主题的 --text-*：在「明亮浅色」下这些变量是深色，
+ * 落在深底上几乎不可读（尤其是 EXIF 高亮数值用的 --accent-2 深蓝）。
+ * 下面给每套主题各配一组「深底专用」文字色，作用域限定在 .viewer 内部；
+ * 同时重新锚定 .viewer 自身的 color，避免子元素继续继承 body 的浅色主题文字色。
+ */
+.viewer {
+  --view-text: #e9ecf3;
+  --view-text-2: #a3adbd;
+  --view-text-3: #7d8798;
+  --view-accent: #6aa1ff;
+  --view-accent-2: #8db8ff;
+  --text: var(--view-text);
+  --text-2: var(--view-text-2);
+  --text-3: var(--view-text-3);
+  color: var(--view-text);
+}
+:root[data-theme='graphite'] .viewer {
+  --view-text: #f4efe4;
+  --view-text-2: #c0b7a7;
+  --view-text-3: #968d7d;
+  --view-accent: #f0bd6d;
+  --view-accent-2: #f7d29b;
+}
+:root[data-theme='nord'] .viewer {
+  --view-text: #eaf1fa;
+  --view-text-2: #adbdcd;
+  --view-text-3: #8a9cb0;
+  --view-accent: #8fc8e2;
+  --view-accent-2: #b3dcf0;
+}
+:root[data-theme='light'] .viewer {
+  --view-text: #eef2f8;
+  --view-text-2: #b6c1d2;
+  --view-text-3: #8f9cae;
+  --view-accent: #7fb0ff;
+  --view-accent-2: #a6c8ff;
+}
+:root[data-theme='ember'] .viewer {
+  --view-text: #f7eee4;
+  --view-text-2: #c7b7a7;
+  --view-text-3: #9d8c7d;
+  --view-accent: #f0a55c;
+  --view-accent-2: #f8c48e;
+}
+:root[data-theme='violet'] .viewer {
+  --view-text: #f1ecfa;
+  --view-text-2: #b9afd4;
+  --view-text-3: #9188b2;
+  --view-accent: #b39aff;
+  --view-accent-2: #cdbbff;
+}
 .viewer--full {
   inset: 0;
 }
@@ -2267,7 +2320,7 @@ input[type='range']::-webkit-slider-thumb {
   font-variant-numeric: tabular-nums;
 }
 .exif-cell--accent b {
-  color: var(--accent-2);
+  color: var(--view-accent);
 }
  
 .toasts {

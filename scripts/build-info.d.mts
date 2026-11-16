@@ -7,9 +7,9 @@ export interface BuildInfo {
   date: string
   /** 当日构建序号 */
   seq: string
-  /** 完整构建编码，例如 NS261113P1 */
+  /** 完整构建编码，例如 NS261116P1 */
   code: string
-  /** 对外展示标识，例如 v1.0.0 NS261113P1 */
+  /** 对外展示标识，例如 v1.0.0 NS261116P1 */
   label: string
   /** 是否为正式发布构建 */
   release: boolean

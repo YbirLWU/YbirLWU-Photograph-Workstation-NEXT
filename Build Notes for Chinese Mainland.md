@@ -1,9 +1,9 @@
 # 中国大陆地区构建与安装排障指南（Build Notes for Chinese Mainland）
 
-> 适用版本：v1.0.0 NS261113P1 · Windows 10/11 x64 · Node.js ≥ 20
+> 适用版本：v1.0.0 NS261116P1 · Windows 10/11 x64 · Node.js ≥ 20
 > 本文档汇总中国大陆地区网络环境下编译、二次开发时的高频共性问题与经开发团队核验的修复方案。
 >
-> Applies to v1.0.0 NS261113P1. This document lists common build issues observed under network conditions in the Chinese mainland, together with verified fixes.
+> Applies to v1.0.0 NS261116P1. This document lists common build issues observed under network conditions in the Chinese mainland, together with verified fixes.
 
 ---
 
